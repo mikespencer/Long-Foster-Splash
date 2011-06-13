@@ -1,0 +1,31 @@
+﻿html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td,object{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}del,ins{text-decoration:none}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:baseline}sub{vertical-align:baseline}legend{color:#000}
+
+object{outline:none;}
+p{margin-bottom:12px;}
+h1{font-size: 30px;font-weight:bold;}
+h2{font-weight:bold;color:#fff;font-size:25px;padding:10px 12px;background-color:#b6082c;}
+h3{font-weight:bold;font-size:25px;margin-bottom:12px;}
+#wrapper{font-family:arial,sans-serif;font-size:11px;color:#464646;width:990px;margin:0 auto 15px;}
+#wrapper_inner{padding:4px;}
+#branding a{display:block;height:92px;width:496px;background:url(http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/logo.png) no-repeat scroll 0 0 transparent;}
+#leaderboard{height:90px;overflow:hidden;}
+#title{border-bottom:2px solid #909090;}
+#title p{font-size:13px;font-weight:bold;}
+#leftcol{width:633px;float:left;overflow:hidden;}
+#rightcol{float:left;padding-top:18px;overflow:hidden;}
+#load_more{text-align:right;margin-bottom:18px;}
+#load_more a{text-decoration:none;font-size:14px;font-weight:bold;color:#006fd6;outline:none;}
+#host_info{font-weight:bold;}
+#host_info img{border:1px solid #a09e9d;padding:2px;float:left;margin-right:12px}
+.ad{padding-right:13px;background:url(http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/advertisment.png) no-repeat scroll right top transparent;margin:0 auto;outline:none;}
+.pad4{padding:4px;}
+.pad12{padding:12px;}
+.pad18{padding:18px 18px 0;}
+.border-bottom{border-bottom:1px solid #000;}
+.center{text-align:center;}
+.float-left{float:left;}
+.clear{clear:both;}
+.hidden{display:none;}
+.question, .answer{color:#fff;margin-bottom:12px;line-height:18px;width:92px;text-align:center;font-weight:bold;}
+.question{background-color:#0a1b4a;}
+.answer{background-color:#b6082c;}
