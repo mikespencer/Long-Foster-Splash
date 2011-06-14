@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Long &amp; Foster | The Washington post</title>
 		<link rel="stylesheet" type="text/css" href="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/styles.css" />		
+		<link rel="stylesheet" type="text/css" href="styles.css" />		
 	</head>
 	<body>
 		
@@ -31,7 +32,7 @@
 				</div><!--#leaderboard end -->
 				
 				<div id="title" class="pad18">
-					<h1>Get Answers to Real Estate's Hottest Topic - Short Sales</h1>
+					<h1>Short Sales and Real Estate: Your Questions Answered</h1>
 					<p>A Special Advertising Section </p>
 				</div><!--#title end-->
 				
@@ -152,23 +153,23 @@
 							<div id="load_more">
 								<a href="#">Load More Questions &raquo;</a>
 							</div><!--#load_more end-->
-							
-						</div><!--.pad18 end-->
 						
-						<h2>About the Host</h2>	
-							<div class="pad18" id="host_info">
+							<h2>About the Host</h2>	
+							<div class="pad12" id="host_info">
 								<img src="http://www.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/jeffrey_detwiler.jpg" width="122" height="149" alt="" />
-								<h3>Jeffrey Detwiler</h3>
+								<h3 class="host">Jeffrey S. Detwiler</h3>
+								<h4>President and Chief Operating Officer<br />The Long &amp; Foster&reg; Companies</h4>
 								<p>Jeff Detwiler is president and chief operating officer of The Long &amp; Foster&reg; Companies. In this capacity, his focus is on guiding the strategic direction of the organization, including the operations of Long &amp; Foster&reg; Real Estate, Inc., as well as our affiliated businesses of mortgage, title, and insurance.</p>
 								<p>He has more than 20 years of experience and expertise in the mortgage industry. His background also includes traditional banking, insurance and portfolio management.</p>
 								<div class="clear"></div>
-							</div><!--.pad18 end-->
-							
+							</div><!--#host_info end-->
+						</div><!--.pad18 end-->
+						
 					</div><!--#leftcol end -->
 					
 					
-					<div id="rightcol">
-						<div class="ad">
+					<div id="rightcol">	
+						<div class="ad module">
 							<object type="application/x-shockwave-flash" data="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/LongFosterMM_201010_HP.swf" width="336" height="600">
 								<param name="movie" value="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/LongFosterMM_201010_HP.swf"/>
 								<param name="quality" value="high"/>
@@ -183,6 +184,27 @@
 								<param name="flashVars" value="clickTag=http://www.longandfoster.com/Market-Minutes/MarketMinutesReports.aspx"/>
 							</object>
 						</div>
+						
+						<div id="connect" class="module">
+							<h2>Connect With Long &amp; Foster</h2>
+							<ul>
+								<li><a href="http://www.facebook.com/LongandFosterRE" target="_blank" title="Friend us on Facebook"><img src="images/facebook.png" height="24" width="24" border="0" alt="facebook" /></a></li>
+								<li><a href="http://twitter.com/#!/longandfoster" target="_blank" title="Follow us on Twitter"><img src="images/twitter.png" height="24" width="24" border="0" alt="facebook" /></a></li>
+							</ul>
+						</div><!--#connect end-->
+						
+						<div id="videos" class="module">
+							<h2>Videos</h2>		
+							<div id="vid1">	
+								<img class="poster" width="336" height="200" src="images/placeholder.png" />
+							</div>			
+							<div id="vid2">
+								<img class="poster" width="336" height="200" src="images/placeholder.png" />			
+							</div>						
+							<div id="vid3">								
+								<img class="poster" width="336" height="200" src="images/placeholder.png" />			
+							</div>
+						</div><!--#videos end -->
 					</div><!--#rightcol end -->
 	
 					<div class="clear"></div>
@@ -193,15 +215,27 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				var set = 1;
+				var set = 1,
+				vids = {
+					vid1 : 'http://videoads.washingtonpost.com/son_in_law_tv.f4v',
+					vid2 : 'http://videoads.washingtonpost.com/son_in_law_tv.f4v',
+					vid3 : 'http://videoads.washingtonpost.com/son_in_law_tv.f4v' 
+				},
+				flashVer = (function(){
+					var i,a,o,p,s="Shockwave",f="Flash",t=" 2.0",u=s+" "+f,v=s+f+".",rSW=RegExp("^"+u+" (\\d+)");
+					if((o=navigator.plugins)&&(p=o[u]||o[u+t])&&(a=p.description.match(rSW)))return a[1];
+					else if(!!(window.ActiveXObject))for(i=10;i>0;i--)try{if(!!(new ActiveXObject(v+v+i)))return i}catch(e){}
+					return 0;
+				})();
+
 				$('#load_more a').click(function(e){
 					e.preventDefault();
 					var $window = $(window), 
 					scrollTop = $window.scrollTop(), 
 					$more=$('#load_more a');
-					
+
 					set = set < 4 ? set + 1 : 1;			
-					
+
 					$('#questions').stop(true,false).fadeOut('fast',function(){
 						$('div.qa-container', this).each(function(){
 							var $this = $(this);
@@ -212,13 +246,39 @@
 								$this.addClass('hidden');
 							}
 						}).parent().fadeIn('fast');
-						
 						$window.scrollTop(scrollTop);
-						
 						if(set===4)$more.html('&laquo; Load Previous Questions');
 						else if(set===1)$more.html('Load More Questions &raquo;');
 					});
 				});
+
+				$('#videos img.poster').click(function(){
+					$(this).unbind('click').parent().html(function(){
+						if(flashVer > 8){
+							var id = $(this).attr('id'),
+							width = '336',
+							height = '200',
+							swf = 'vidPlayer.swf',
+							params = '<param name="movie" value="'+swf+'" />' +
+								'<param name="quality" value="high" />' +
+								'<param name="bgcolor" value="#000000" />' +
+								'<param name="play" value="true" />' +
+								'<param name="loop" value="true" />' +
+								'<param name="wmode" value="opaque" />' +
+								'<param name="scale" value="noscale " />' +
+								'<param name="menu" value="true" />' +
+								'<param name="devicefont" value="false" />' +
+								'<param name="salign" value="" />' +
+								'<param name="allowScriptAccess" value="always" />' +
+								'<param name="flashVars" value="source='+ vids[id] +'&mute=false&poster=images/jeffrey_detwiler.jpg" />';
+
+							return '<object id="'+id+'" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="'+width+'" height="'+height+'">' + params + '<!--[if !IE]>-'+'-><object type="application/x-shockwave-flash" data="'+swf+'" width="'+width+'" height="'+height+'">' + params + '</object><!--<![endif]-'+'-></object>';
+						}
+						else{
+							return '<div><a href="http://get.adobe.com/flashplayer/" target="_blank" style="color:#0000aa;font-family:arial,verdana,sans-serif"><img src="http://www.adobe.com/shockwave/download/images/flashplayer_100x100.jpg" border="0" style="float:left;padding-right:10px">To view this video, please install the latest version of Adobe Flash Player.</a><div class="clear"></div></div>';
+						}
+					})
+				})
 			})
 		</script>
 		
