@@ -1,6 +1,6 @@
 ﻿html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td,object{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}del,ins{text-decoration:none}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:baseline}sub{vertical-align:baseline}legend{color:#000}
 
-object{outline:none;}
+object, embed{outline:none;}
 p{margin-bottom:12px;}
 h1{font-size: 30px;font-weight:bold;}
 h2{font-weight:bold;color:#fff;font-size:25px;padding:10px 12px;background-color:#b6082c;}
@@ -16,15 +16,15 @@ h4{font-weight:bold;font-size:11px;margin-bottom:12px;}
 #leftcol{width:633px;float:left;overflow:hidden;}
 #rightcol{float:left;padding-top:18px;overflow:hidden;}
 #rightcol h2{font-size:20px;padding-right:0}
-#load_more{text-align:right;margin-bottom:18px;}
-#load_more a{text-decoration:none;font-size:14px;font-weight:bold;color:#006fd6;outline:none;}
 #host_info{font-weight:bold;}
 #host_info img{border:1px solid #a09e9d;padding:2px;float:left;margin:0 12px 40px 0;}
 #connect ul {display:block;margin:12px auto; width:336px;}
 #connect ul li {display:inline;margin:0 5px;}
-#videos .poster{cursor:pointer;width:336px;margin:12px auto;height:200px;display:block;}
-#videos object{width:336px;display:block;margin:12px auto;}
-#vid1, #vid2, #vid3 { width:336px; margin:12px auto; }
+#videos h3 {margin:0;font-size:14px;margin-top:12px;}
+#videos h3 a{font-weight:bold;font-size:14px;margin:0;color:#464646;text-decoration:none;}
+#videos h3 a:hover{text-decoration:underline;}
+#videos h4 {font-weight:normal;font-size:11px;margin:0 0 3px 0}
+#vid1, #vid2, #vid3 { width:336px; margin:0  auto 12px auto; }
 .ad{padding-right:13px;background:url(http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/advertisment.png) no-repeat scroll right top transparent;margin:0 auto;outline:none;}
 .pad4{padding:4px;}
 .pad12{padding:12px;}
@@ -38,3 +38,5 @@ h4{font-weight:bold;font-size:11px;margin-bottom:12px;}
 .question{background-color:#0a1b4a;}
 .answer{background-color:#b6082c;}
 .module{margin-bottom:12px;}
+.link{text-align:right;margin-bottom:18px;}
+.link a{text-decoration:none;font-size:14px;font-weight:bold;color:#006fd6;outline:none;}
