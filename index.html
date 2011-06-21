@@ -4,8 +4,8 @@
 		<meta charset="UTF-8">
 		<meta property="og:image" content="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/jeffrey_detwiler.jpg"/>
 		<title>Short Sales and Real Estate: Your Questions Answered - Long &amp; Foster | The Washington Post</title>
-		<link rel="stylesheet" type="text/css" href="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/styles.css" />		
-		<!--link rel="stylesheet" type="text/css" href="styles.css" /-->		
+		<!--link rel="stylesheet" type="text/css" href="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/styles.css" /-->		
+		<link rel="stylesheet" type="text/css" href="styles.css" />		
 	</head>
 	<body>
 		
@@ -190,19 +190,27 @@
 							<h2>Connect With Long &amp; Foster</h2>
 							<ul>
 								<li><a href="http://www.facebook.com/LongandFosterRE" target="_blank" title="Friend us on Facebook"><img src="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/facebook.png" height="24" width="24" border="0" alt="Facebook" /></a></li>
-								<li><div style="display:inline;" id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=162726930461803&amp;xfbml=1"></script><script type="text/javascript">document.write('<fb:like href="'+location.href+'" send="false" layout="standard" width="285" show_faces="false" action="like" font=""></fb:like>');</script></li>
+								<li><div style="display:inline;" id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=162726930461803&amp;xfbml=1"></script><script type="text/javascript">document.write('<fb:like href="'+location.href+'" send="false" layout="standard" width="285" show_faces="false" action="recommend" font=""></fb:like>');</script></li>
 							</ul>
 							<ul>
 								<li><a href="http://twitter.com/#!/longandfoster" target="_blank" title="Follow us on Twitter"><img src="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/twitter.png" height="24" width="24" border="0" alt="Twitter" /></a></li>
 								<li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
 							</ul>
-							<ul>
-								<li class="link">
-									<script type="text/javascript">
-										document.write('<a href="mailto:?subject=Short Sales and Real Estate: Your Questions Answered - Long %26 Foster&body='+escape(location.href)+'"><img src="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/email_icon.png" width="24" height="15" border="0" alt="email to a friend" style="padding-right:10px;" />Email to a friend</a>');
-									</script>
-									<!--a href="mailto:?subject=Short Sales and Real Estate: Your Questions Answered - Long %26 Foster&body=http://www.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash"><img src="http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/email_icon.png" width="24" height="15" border="0" alt="email to a friend" style="padding-right:10px;" />Email to a friend</a-->
-								</li>
+							<ul id="sharebar">
+								<script type="text/javascript">
+									(function(){
+										var url= encodeURIComponent(location.href), title= encodeURIComponent(document.title);
+										document.write('<li class="first"><a class="email share iframe-overlay" href="mailto:?subject='+title+'&body='+url+'">Email to a friend</a></li>'+
+											'<li><a target="_blank" href="http://tumblr.com/share" class="tumblr share">Tumblr</a></li>'+
+											'<li><a target="_blank" href="http://reddit.com/submit?url='+ url +'&amp;title='+title+'" class="reddit share">Reddit</a></li>'+
+											'<li><a target="_blank" href="http://www.stumbleupon.com/submit?url='+ url +'&amp;title='+ title +'" class="stumble-upon share">Stumbleupon</a></li>'+
+											'<li><a target="_blank" href="http://digg.com/submit?phase=2&amp;url='+ url +'&amp;title='+ title +'" class="digg share">Digg</a></li>'+
+											'<li><a target="_blank" href="http://www.delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+ url +'&amp;title='+ title +'" class="delicious share">Delicious</a></li>'+
+											'<li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url='+ url +'&amp;title='+ title +'&amp;source=The+Washington+Post" class="linkedin share">LinkedIn</a></li>'+
+											'<li><div id="___plusone_0" style="height: 15px; width: 24px; display: inline-block;"><iframe width="100%" frameborder="0" scrolling="no" vspace="0" tabindex="-1" style="position: static; left: 0pt; top: 0pt; width: 24px; height: 15px; visibility: visible;" src="https://plusone.google.com/u/0/_/+1/button?hl=en-US&amp;jsh=r%3Bgc%2F21773286-02b1a9f6#url='+url+'&amp;size=small&amp;count=false&amp;id=I1_1308670598948&amp;parent=http%3A%2F%2Fwww.washingtonpost.com&amp;rpctoken=217009807&amp;_methods=_ready%2C_close%2C_open%2C_resizeMe" name="I1_1308670598948" marginwidth="0" marginheight="0" id="I1_1308670598948" hspace="0" allowtransp;arency="true"></iframe></div></li>'+
+											'<li class="clear" style="float:none;display:block;"></li>');
+									}());
+								</script>
 							</ul>
 						</div><!--#connect end-->
 						
@@ -257,9 +265,9 @@
 						if(set===4)$more.html('&laquo; Load Previous Questions');
 						else if(set===1)$more.html('Load More Questions &raquo;');
 					});
-				});				
+				});
 			})
 		</script>
-		
+		<script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
 	</body>
 </html>

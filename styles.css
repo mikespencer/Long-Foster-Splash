@@ -52,3 +52,41 @@ h4{font-weight:bold;font-size:11px;margin-bottom:12px;}
 .module{margin-bottom:12px;}
 .link{text-align:right;margin-bottom:18px;}
 .link a{text-decoration:none;font-size:14px;font-weight:bold;color:#006fd6;outline:none;}
+
+/*share buttons*/
+#connect #sharebar li{
+	margin:0 0 0 5px;
+	float:left;
+}
+#connect #sharebar li.first{
+	margin-left:10px;
+}
+#connect #sharebar li a {
+	background: url(http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/icon-sprite-share.png) no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 16px;
+	text-indent: -10000px;
+	width: 16px;
+	text-decoration:none;
+}	
+#connect #sharebar li a.email {
+	background-position: 0 -171px;
+}
+#connect #sharebar li a.tumblr {
+	background-position: 0 -228px;
+}
+#connect #sharebar li a.reddit {
+	background-position: 0 -247px;
+}
+#connect #sharebar li a.stumble-upon {
+	background-position: 0 -95px;
+}
+#connect #sharebar li a.digg {
+	background-position: 0 -57px;
+}
+#connect #sharebar li a.delicious {
+	background-position: 0 -76px;
+}
+#connect #sharebar li a.linkedin {
+	background-position: 0 -152px;
+}
