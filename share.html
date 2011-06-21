@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>share buttons test</title>
+
+<style type="text/css">
+	*{
+		margin:0;padding:0;list-style:none;
+	}
+	#connect li{
+		margin-right:4px;
+		float:left;
+	}
+	#connect li a {
+		background: url(http://media.washingtonpost.com/wp-adv/advertisers/longfoster/2011/06/splash/images/icon-sprite-share.png) no-repeat scroll 0 0 transparent;
+		display: block;
+		height: 16px;
+		text-indent: -10000px;
+		width: 16px;
+		text-decoration:none;
+	}	
+	#connect li a.email {
+		background-position: 0 -171px;
+	}
+	#connect li a.tumblr {
+		background-position: 0 -228px;
+	}
+	#connect li a.reddit {
+		background-position: 0 -247px;
+	}
+	#connect li a.stumble-upon {
+		background-position: 0 -95px;
+	}
+	#connect li a.digg {
+		background-position: 0 -57px;
+	}
+	#connect li a.delicious {
+		background-position: 0 -76px;
+	}
+	#connect li a.linkedin {
+		background-position: 0 -152px;
+	}
+</style>
+
+</head>
+<body>
+	<div id="connect">
+		<ul>
+			<script type="text/javascript">
+				(function(){
+					var url= escape(location.href), title= escape(document.title);
+					document.write(
+						'<li><a href="/opinions/scott-walker-finds-making-bumper-stickers-is-easier-than-creating-jobs/2011/06/20/AGf6kOdH_email.html" config="width=850&amp;height=800" class="email share iframe-overlay">Email</a></li>'+
+						'<li><a href="http://tumblr.com/share" class="tumblr share">Tumblr</a></li>'+
+						'<li><a href="http://reddit.com/submit?url='+ url +'" class="reddit share">Reddit</a></li>'+
+						'<li><a href="http://www.stumbleupon.com/submit?url='+ url +'&amp;title='+ title +'" class="stumble-upon share">Stumbleupon</a></li>'+
+						'<li><a href="http://digg.com/submit?phase=2&amp;url='+ url +'&amp;title='+ title +'" class="digg share">Digg</a></li>'+
+						'<li><a href="http://www.delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+ url +'&amp;title='+ title +'" class="delicious share">Delicious</a></li>'+
+						'<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url='+ url +'&amp;title='+ title +'&amp;source=The+Washington+Post" class="linkedin share">LinkedIn</a></li>'+
+						'<li><div id="___plusone_0" style="height: 15px; width: 24px; display: inline-block;"><iframe width="100%" frameborder="0" scrolling="no" vspace="0" tabindex="-1" style="position: static; left: 0pt; top: 0pt; width: 24px; height: 15px; visibility: visible;" src="https://plusone.google.com/u/0/_/+1/button?hl=en-US&amp;jsh=r%3Bgc%2F21773286-02b1a9f6#url='+url+'&amp;size=small&amp;count=false&amp;id=I1_1308670598948&amp;parent=http%3A%2F%2Fwww.washingtonpost.com&amp;rpctoken=217009807&amp;_methods=_ready%2C_close%2C_open%2C_resizeMe" name="I1_1308670598948" marginwidth="0" marginheight="0" id="I1_1308670598948" hspace="0" allowtransp;arency="true"></iframe></div></li>');
+				}());
+			</script>
+		</ul>
+		<div class="clear"></div>
+	</div>
+</body>
+</html>
